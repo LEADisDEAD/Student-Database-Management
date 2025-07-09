@@ -111,6 +111,8 @@ Deployment Ready:
 
 ---
 
-Let me know if you want the **SQL queries for creating the tables** included too.
+## 👩‍💻 Authors
 
+**Prathmesh Manoj Bajpai**  
+[LinkedIn](https://www.linkedin.com/in/prathmesh-bajpai-8429652aa/)
 
