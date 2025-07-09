@@ -64,7 +64,9 @@ Deployment Ready:
 > Or embed it below:
 
 ```html
-<a href="https://www.youtube.com/watch?v=YOUR_VIDEO_LINK" target="_blank">
-  <img src="https://img.youtube.com/vi/YOUR_VIDEO_LINK/hqdefault.jpg" alt="Watch the demo" width="500">
+<a href="https://www.youtube.com/watch?v=[YOUR_VIDEO_LINK](https://youtu.be/zaM3BoTpZdQ)" target="_blank">
+  <img src="https://img.youtube.com/vi/https://youtu.be/zaM3BoTpZdQ/hqdefault.jpg" alt="Watch the demo" width="500">
 </a>
 ```
+
+
