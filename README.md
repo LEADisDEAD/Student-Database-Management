@@ -50,10 +50,10 @@ Deployment Ready:
 <img src="static/stdb_ss_2.PNG" alt="Home Page" width="500" height="auto"/>
 
 ### ✏️ Student edit
-<img src="static/stdb_ss_1.PNG" alt="Home Page" width="500" height="auto"/>
+<img src="static/stdb_ss_3.PNG" alt="Home Page" width="500" height="auto"/>
 
 ### 📊 Marks Chart View & Edit
-<img src="static/stdb_ss_3.PNG" alt="Home Page" width="500" height="auto"/>
+<img src="static/stdb_ss_4.PNG" alt="Home Page" width="500" height="auto"/>
 
 ---
 
