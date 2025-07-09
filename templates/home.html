@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Student Management{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>STUDENT MANAGEMENT SYSTEM</h1>
+    <br>
+<hr color="#17240f">
+    <p>
+        Student Management System is a web application built using Flask and MySQL that helps manage student records efficiently. It allows you to add, edit, delete, and view student details along with their subject-wise marks, total, and average scores.
+    </p>
+<hr color="#17240f">
+<br>
+<div class="container">
+    <img src="{{ url_for('static', filename='student_icon.png') }}" alt="Student Icon" style="display: block; margin: auto; width: 200px; border-radius: 50%;">
+
+    <form method="post" action="/add" autocomplete="off">
+        <input type="text" name="name" placeholder="Student name" required><br>
+        <input type="number" name="age" placeholder="Student age" required>
+        <label for="student_class">Class:</label>
+        <select name="student_class" id = "student_class" class="custom-select"required>
+            <option value="" disabled selected>Select class</option>
+            {% for i in range(1, 13) %}
+                <option value="{{ i }}">{{ i }}</option>
+            {% endfor %}
+        </select>
+        <br>
+        <button type="submit">Add student</button>
+    </form>
+
+    <form action="{{ url_for('view_students') }}">
+        <button type="submit">View Students</button>
+    </form>
+</div>
+    {% if add_message %}
+        <p style="color: green;">{{ add_message }}</p>
+    {% endif %}
+<br>
+<hr color="#17240f">
+
+
+{% endblock %}

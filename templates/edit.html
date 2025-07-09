@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Edit Student{% endblock %}
+
+{% block content %}
+<br>
+    <h1>Edit Student</h1>
+
+    <hr color="#17240f">
+    <br>
+<div class="container">
+    <form method="POST" action="{{ url_for('update_student', student_id=student['id']) }}">
+        <input type="text" name="name" value="{{ student['name'] }}" required>
+        <br>
+        <input type="number" name="age" value="{{ student['age'] }}" required>
+        <br>
+             <select name="student_class" class="custom-select" required>
+              {% for c in range(1, 13) %}
+                <option value="{{ c }}" {% if student.student_class == c or student.student_class == c|string %}selected{% endif %}>{{ c }}</option>
+              {% endfor %}
+            </select>
+        <br>
+        <button type="submit">Update</button>
+    </form>
+</div>
+<br>
+<hr color="#17240f">
+{% endblock %}

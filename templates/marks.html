@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+
+{% block title %}Student Marks{% endblock %}
+
+{% block content %}
+    <br>
+    <h1>Marks for {{ student.name }}</h1>
+    <hr color="#17240f">
+
+    {% if marks %}
+
+<div class="container2">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mark in marks %}
+                    <tr>
+                        <td>{{ mark.subject_name }}</td>
+                        <td>{{ mark.marks }}</td>
+                        <td>
+
+                            <form action="{{ url_for('update_mark', mark_id=mark.id) }}" method="POST">
+                                <div class="mark-edit-box" >
+                                    <input class="marks-edit-table" type="number" name="marks" value="{{ mark.marks }}" required>
+                                    <button type="submit" class="edit-button" style="margin: 0px 0px 0px 0px;">Update</button>
+                                </div>
+                            </form>
+                            <form action="{{ url_for('delete_mark', mark_id=mark.id, student_id=student.id) }}" method="POST" style="display: inline;">
+                                <div class="mark-edit-box">
+                                    <button type="submit"  class="delete-button-markseditpage" style="margin: 10px 0px 0px 0px;">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="20"  background-color="black" height="16" fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
+  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5"></path>
+</svg>
+
+                                    </button>
+                                </div>
+                              </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+</div>
+    {% else %}
+        <p>No marks found. You can add marks below.</p>
+    {% endif %}
+    <br>
+    <hr color="#17240f">
+    <h3>Add New Marks</h3>
+    <div class="container">
+        <form action="{{ url_for('add_mark', student_id=student.id) }}" method="POST">
+            <select name="subject_id" required class="custom-select">
+                {% for subject in subjects %}
+                    <option value="{{ subject.id }}">{{ subject.subject_name }}</option>
+                {% endfor %}
+            </select>
+            <input type="number" name="marks" placeholder="Marks" required>
+            <button type="submit" class="edit-button" style="margin: 15px 0px 10px 0px">Add Marks</button>
+        </form>
+    </div>
+<br>
+<hr color="#17240f">
+<br>
+<h2 style="text-align: center;" >Subject-wise Marks Chart</h2>
+<canvas id="marksChart" width="400" height="200" style="margin: auto;"></canvas>
+
+<script>
+  const ctx = document.getElementById('marksChart').getContext('2d');
+
+  const marksChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: {{ subject_names | tojson }},
+          datasets: [{
+              label: 'Marks',
+              data: {{ subject_marks | tojson }},
+              backgroundColor: 'rgba(30, 215, 96, 0.7)',
+              borderColor: 'rgba(30, 215, 96, 1)',
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              y: {
+                  beginAtZero: true,
+                  max: 100  // Optional: limit max marks
+              }
+          }
+      }
+  });
+</script>
+<br>
+<hr color="#17240f">
+
+{% endblock %}
