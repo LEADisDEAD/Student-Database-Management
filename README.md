@@ -59,15 +59,10 @@ Deployment Ready:
 
 ## 🎬 Video Demo
 
-[▶️ Click to Watch Demo on YouTube](https://www.youtube.com/watch?v=YOUR_VIDEO_LINK)
+🎬 **Video Demo**
 
-> Or embed it below:
+▶️ [Click to Watch Demo on YouTube](https://youtu.be/zaM3BoTpZdQ)
 
-```html
-<a href="https://youtu.be/zaM3BoTpZdQ" target="_blank">
-  <img src="https://img.youtube.com/vi/zaM3BoTpZdQ/hqdefault.jpg" alt="Watch the demo" width="500">
-</a>
-
-```
+[![Watch the demo](https://img.youtube.com/vi/zaM3BoTpZdQ/hqdefault.jpg)](https://youtu.be/zaM3BoTpZdQ)
 
 
