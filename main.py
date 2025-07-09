@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request,redirect,url_for
 from flask_mysqldb import MySQL
 import MySQLdb.cursors
+import os
 
+IS_RENDER = os.environ.get('RENDER', False)
 # database configuration:
 app = Flask(__name__)
 
@@ -144,7 +146,8 @@ def delete_mark(mark_id, student_id):
     cursor.close()
     return redirect(url_for('view_marks', student_id=student_id))
 
-app.run(debug=True,host='192.168.0.102')
+
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    if not IS_RENDER:
+        app.run(debug=True)
