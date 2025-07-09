@@ -43,7 +43,7 @@ Deployment Ready:
 ## 📷 Screenshots
 
 ### 🏠 Home Page
-![Home Page](stdb_ss_1.PNG)
+![Home Page](static/stdb_ss_1.PNG)
 
 ### 📋 Student List
 ![Students](screenshots/students.png)
