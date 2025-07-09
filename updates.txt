@@ -1,3 +1,0 @@
-6th june:
-- Added total students in students_view.html
-- Added help section in navbar (for website information) *
