@@ -59,7 +59,6 @@ Deployment Ready:
 
 ## 🎬 Video Demo
 
-🎬 **Video Demo**
 
 ▶️ [Click to Watch Demo on YouTube](https://youtu.be/zaM3BoTpZdQ)
 
