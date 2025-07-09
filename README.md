@@ -71,9 +71,10 @@ Deployment Ready:
 - **Database**: MySQL
 - **Libraries**: Flask-MySQLdb, Chart.js
 
+---
 
 
-### 🔧 Setup Instructions (Normal Text Version)
+### 🔧 Setup Instructions 
 
 1. **Clone the repository**
    Download or clone the project files from your GitHub repository to your computer.
