@@ -43,19 +43,17 @@ Deployment Ready:
 ## 📷 Screenshots
 
 ### 🏠 Home Page
-<img src="static/stdb_ss_1.PNG" alt="Home Page" width="400" height="auto"/>
+<img src="static/stdb_ss_1.PNG" alt="Home Page" width="500" height="auto"/>
 
 
 ### 📋 Student List
-![Students](screenshots/students.png)
+<img src="static/stdb_ss_2.PNG" alt="Home Page" width="500" height="auto"/>
 
-### ✏️ Add Marks
-![Add Marks](screenshots/add_marks.png)
+### ✏️ Student edit
+<img src="static/stdb_ss_1.PNG" alt="Home Page" width="500" height="auto"/>
 
-### 📊 Marks Chart View
-![Marks Chart](screenshots/marks_chart.png)
-
-> ✅ Store all screenshots inside a `screenshots/` folder in your repo.
+### 📊 Marks Chart View & Edit
+<img src="static/stdb_ss_3.PNG" alt="Home Page" width="500" height="auto"/>
 
 ---
 
